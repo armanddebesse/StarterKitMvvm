@@ -10,12 +10,15 @@
     <RootNamespace>StarterKitMvvmWpf</RootNamespace>
     <Win32Resource />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Helrho (Armand Debesse)</Authors>
+    <Authors>Armand Debesse</Authors>
     <Description>A starter kit for Mvvm Wpf application.
 - BaseViewModel (handle propertychanged event, handle datavalidation)
 - BaseCommand (implement ICommand with CanExecuteChanged event)
 -StarterKitTheme (Ressource dictionnary with styles, for example text box style to display error messages)</Description>
     <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/armanddebesse/StarterKitMvvm</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/armanddebesse/StarterKitMvvm</PackageProjectUrl>
+    <Company>Helrho</Company>
   </PropertyGroup>
 
 </Project>
