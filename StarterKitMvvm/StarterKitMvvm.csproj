@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+    <StartupObject />
+    <AssemblyName>StarterKitMvvmWpf</AssemblyName>
+    <RootNamespace>StarterKitMvvmWpf</RootNamespace>
+    <Win32Resource />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Helrho (Armand Debesse)</Authors>
+    <Description>A starter kit for Mvvm Wpf application.
+- BaseViewModel (handle propertychanged event, handle datavalidation)
+- BaseCommand (implement ICommand with CanExecuteChanged event)
+-StarterKitTheme (Ressource dictionnary with styles, for example text box style to display error messages)</Description>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+</Project>
