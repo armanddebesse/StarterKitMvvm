@@ -70,6 +70,6 @@ There is only two steps to beneficiate of this error displaying :
     }
 ```
 
-## The Base Command
+### The Base Command
 This starter kit provides a BaseCommand to help you with your commands. <br />
 You just have to inherit your custom commands from the BaseCommand.
