@@ -9,7 +9,7 @@
 </Window.Resources>
 ```
 * You can find a basic usage example in the [ExampleProject](ExampleProject_Using_StarterKitMvvm)
-
+* Don't forget to open an issue for all questions or requests !
 ## Content
 
 ### The Base ViewModel
