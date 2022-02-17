@@ -1,13 +1,20 @@
 # StarterKitMvvm
 
 ## Starting
-Just add the nuget to your project : https://www.nuget.org/packages/StarterKitMvvmWpf/
+* Add the nuget to your project : https://www.nuget.org/packages/StarterKitMvvmWpf/
+* Import the Ressource Dictionnary on your view :
+```xaml
+<Window.Resources>
+        <ResourceDictionary Source="pack://application:,,,/StarterKitMvvmWpf;component/StarterKitTheme.xaml"/>
+</Window.Resources>
+```
+* You can find a basic usage example in the [ExampleProject](ExampleProject_Using_StarterKitMvvm)
 
 ## Content
 
 ### The Base ViewModel
-This starter kit provides a BaseViewModel to help you on differents ways.
-You just have to inherit your custom view models from the BaseViewModel
+This starter kit provides a BaseViewModel to help you on differents ways. <br />
+You just have to inherit your custom view models from the BaseViewModel.
 #### PropertyChanged event
 Use this event on your binded properties to notify the UI when the value changes. <br />
 Example :
