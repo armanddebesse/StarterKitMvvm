@@ -11,6 +11,9 @@
     </Window.Resources>
     
     <Grid>
-        <TextBox Width="200" Height="30" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource ErrorInfoTextBox}"/>
-    </Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBox Margin="50" Width="200" Height="30" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource ErrorInfoTextBox}"/>
+            <Button Content="Submit" Command="{Binding DisplayUserInputCommand}" Width="150" Height="50"/>
+        </StackPanel>
+        </Grid>
 </Window>

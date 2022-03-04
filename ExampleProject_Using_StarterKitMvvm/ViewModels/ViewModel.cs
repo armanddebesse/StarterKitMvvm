@@ -1,7 +1,9 @@
-﻿using StarterKitMvvmWpf;
+﻿using ExampleProject_Using_StarterKitMvvm.Commands;
+using StarterKitMvvmWpf;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 
 namespace ExampleProject_Using_StarterKitMvvm.ViewModels
 {
@@ -21,6 +23,13 @@ namespace ExampleProject_Using_StarterKitMvvm.ViewModels
                 }
                 OnPropertyChanged(nameof(Text));
             }
+        }
+
+        public ICommand DisplayUserInputCommand { get; }
+
+        public ViewModel()
+        {
+            DisplayUserInputCommand = new DisplayUserInputCommand(this);
         }
     }
 }
