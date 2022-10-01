@@ -73,3 +73,43 @@ There is only two steps to beneficiate of this error displaying :
 ### The Base Command
 This starter kit provides a BaseCommand to help you with your commands. <br />
 You just have to inherit your custom commands from the BaseCommand.
+
+```C#
+    public class DisplayUserInputCommand : BaseCommand
+    {
+        // Get the ViewModel in private field to acces the properties
+        private readonly ViewModel _viewModel;
+
+        public DisplayUserInputCommand(ViewModel viewModel)
+        {
+            _viewModel = viewModel;
+            
+            // Don't forget tu subscribe to the PropertyChanged event to check if the command can be executed
+            // each time the concerned properties changes
+            _viewModel.PropertyChanged += OnViewModelPropertyChanged;
+        }
+
+        // Here is the content of the command, this code will be executed when the command will be executed
+        public override void Execute(object parameter)
+        {
+            MessageBox.Show("Your message is : " + _viewModel.Text);
+        }
+        
+        // Your logic to allow or deny the execution of the command
+        // Here, the command can be executed only if Text (content of TextBox) is not null or empty
+        public override bool CanExecute(object parameter)
+        {
+            return !string.IsNullOrEmpty(_viewModel.Text) && base.CanExecute(parameter);
+        }
+        
+        // Create an event handler to check if the command can be executed
+        private void OnViewModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            // Check if the command can be executed only when concerned properties changes
+            if (e.PropertyName == nameof(ViewModel.Text))
+            {
+                OnCanExecutedChanged();
+            }
+        }
+    }
+ ```
